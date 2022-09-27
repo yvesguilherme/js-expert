@@ -1,0 +1,2 @@
+# Pegar a resposta e passar para um arquivo json.
+src > node service.js > mocks/tatooine.json
