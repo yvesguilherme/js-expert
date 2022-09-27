@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Harry Potter",
+    "house": "Gryffindor",
+    "yearOfBirth": 1980,
+    "wizard": true,
+    "ancestry": "half-blood"
+  },
+  {
+    "name": "Hermione Granger",
+    "house": "Gryffindor",
+    "yearOfBirth": 1979,
+    "wizard": true,
+    "ancestry": "muggleborn"
+  },
+  {
+    "name": "Draco Malfoy",
+    "house": "Slytherin",
+    "yearOfBirth": 1980,
+    "wizard": true,
+    "ancestry": "pure-blood"
+  },
+  {
+    "name": "Albus Dumbledore",
+    "house": "Gryffindor",
+    "yearOfBirth": 0,
+    "wizard": true,
+    "ancestry": "half-blood"
+  },
+  {
+    "name": "Lord Voldemort",
+    "house": "Slytherin",
+    "yearOfBirth": 1926,
+    "wizard": true,
+    "ancestry": "half-blood"
+  },
+  {
+    "name": "Mafalda Hopkirk",
+    "house": "unknown",
+    "yearOfBirth": 0,
+    "wizard": true,
+    "ancestry": "unknown"
+  }
+]

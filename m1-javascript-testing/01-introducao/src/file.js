@@ -38,12 +38,12 @@ class File {
       };
     }
 
-    const isConentLengthAccepted = (
+    const isContentLengthAccepted = (
       fileWithoutHeader.length > 0 &&
       fileWithoutHeader.length <= options.maxLines
     );
 
-    if (!isConentLengthAccepted) {
+    if (!isContentLengthAccepted) {
       return {
         error: error.FILE_LENGTH_ERROR_MESSAGE,
         valid: false
