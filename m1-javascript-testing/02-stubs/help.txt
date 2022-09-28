@@ -1,0 +1,3 @@
+São usados para:
+- Para testar retornos de uma dependência externa;
+- Testar o comportamento do nosso SUT (System under Test) frente aos diferentes retornos da API. Exemplo: retornos de sucesso, falhas ou exceções.
