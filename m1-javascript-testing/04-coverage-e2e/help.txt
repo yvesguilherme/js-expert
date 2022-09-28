@@ -1,0 +1,2 @@
+1 - Usar o stub do sinon para interceptar as chamadas externas: BD, API, Arquivos;
+2 - Usar a lib Istanbul (nyc) para verificar a cobertura de testes.
