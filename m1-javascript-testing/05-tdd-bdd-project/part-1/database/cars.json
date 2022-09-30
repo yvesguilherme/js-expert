@@ -1,0 +1,23 @@
+[
+  {
+    "id": "5bfcae5a-5750-468d-a93b-aeb697d3c29e",
+    "name": "F-150",
+    "releaseYear": 2022,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "aa264343-b91c-44a1-a28c-0325fab9188f",
+    "name": "Prius",
+    "releaseYear": 2022,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "ed84945c-eb47-4b5c-9347-4f7250f307a2",
+    "name": "911",
+    "releaseYear": 2022,
+    "available": true,
+    "gasAvailable": true
+  }
+]
