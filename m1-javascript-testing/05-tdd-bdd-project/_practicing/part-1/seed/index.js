@@ -16,13 +16,39 @@ const carCategory = new CarCategory({
   price: +faker.finance.amount(20, 200)
 });
 
+const cars = [];
+const customers = [];
+
+for (let index = 0; index <= ITEMS_AMOUNT; index++) {
+  const car = new Car({
+    id: faker.datatype.uuid(),
+    name: faker.vehicle.model(),
+    releaseYear: faker.date.past().getFullYear(),
+    available: true,
+    gasAvailable: true
+  });
+  carCategory.carIds.push(car.id);
+  cars.push(car);
+
+  const customer = new Customer({
+    id: faker.datatype.uuid(),
+    name: faker.name.firstName(),
+    age: faker.datatype.number({ min: 18, max: 50 })
+  });
+  customers.push(customer);
+}
+
 const write = (filename, data) => writeFile(
   join(seederBaseFolder, filename),
   JSON.stringify(data)
 );
 
 ; (async () => {
-  await write('carCategory.json', [carCategory]);
+  await write('cars.json', cars);
+  await write('customers.json', customers);
+  await write('carCategories.json', [carCategory]);
 
-  console.log(carCategory);
+  console.log('cars', cars);
+  console.log('customers', customers);
+  console.log('carCategory', carCategory);
 })();
