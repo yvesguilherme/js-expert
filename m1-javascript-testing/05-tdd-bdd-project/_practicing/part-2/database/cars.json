@@ -1,0 +1,23 @@
+[
+  {
+    "id": "4e1e9496-5c6d-42dd-9fe6-3a1bec6fce95",
+    "name": "Escalade",
+    "releaseYear": 2022,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "99d15076-3ee0-4366-a285-1d5716bcfdd0",
+    "name": "Element",
+    "releaseYear": 2021,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "58724976-06c3-498c-898e-63e240a1b78e",
+    "name": "Civic",
+    "releaseYear": 2022,
+    "available": true,
+    "gasAvailable": true
+  }
+]
