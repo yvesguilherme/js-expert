@@ -42,7 +42,7 @@ describe('CarService Suite Tests', () => {
     const data = [0, 1, 2, 3, 4];
     const result = carService.getRandomPositionFromArray(data);
 
-    // Or expect(result).to.br.lte(data.length).and.be.gte(0)
+    // Or expect(result).to.be.lte(data.length).and.be.gte(0)
     expect(result).to.be.lessThanOrEqual(data.length).and.be.greaterThanOrEqual(0);
   });
 
