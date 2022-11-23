@@ -1,0 +1,15 @@
+https://javascript.info/async-iterators-generators#summary
+
+https://jakearchibald.com/2017/async-iterators-and-generators/
+
+
+No ECMAScript 2015, os generators (geradores) foram introduzidos na linguagem JavaScript.
+Um gerador é um processo que pode ser pausado e retomado e gerar vários valores.
+Um gerador no JavaScript consiste em uma função gerador, que retorna um objeto iterável Generator.
+
+Geradores podem manter o estado, fornecendo uma maneira eficiente de fazer iteradores,
+e são capazes de lidar com fluxos de dados infinitos, o que pode ser usado para
+implementar a rolagem infinita no front-end de um aplicativo Web para operar em
+dados de onda sonora, dentre outros. Além disso, quando usado com Promises,
+os geradores podem imitar a funcionalidade async/await, que nos permite lidar com
+código assíncrono de uma maneira mais simples e legível.
