@@ -145,7 +145,27 @@ assert.deepStrictEqual([...myDate], expectedDates);
 //   }
 // })();
 
+/**
+ * Só chama o Symbol.iterator.
+ */
 ; (async () => {
   const dates = await Promise.all([...myDate]);
   assert.deepStrictEqual(dates, expectedDates);
 })();
+
+/**
+ * Para chamar o Symbol.asyncIterator,
+ * o código deve ser executado com o for await,
+ * como no exemplo abaixo.
+ */
+{
+  const dates = [];
+
+  for await (const date of collection) {
+    dates.push(date)
+  }
+
+  const expectedDatesInISOString = expectedDates.map(item => item.toISOString());
+
+  assert.deepStrictEqual(dates, expectedDatesInISOString);
+}
