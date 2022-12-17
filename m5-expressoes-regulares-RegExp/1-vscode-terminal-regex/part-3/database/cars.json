@@ -1,0 +1,23 @@
+[
+  {
+    "id": "750f7499-26e2-496b-9b13-8212cd62ed1a",
+    "name": "Roadster",
+    "releaseYear": 2021,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "4120e809-f27e-46d6-80d1-7013ae72ded9",
+    "name": "Escalade",
+    "releaseYear": 2021,
+    "available": true,
+    "gasAvailable": true
+  },
+  {
+    "id": "d81ee647-7600-4c1a-9f4c-53981baeacdd",
+    "name": "Cruze",
+    "releaseYear": 2022,
+    "available": true,
+    "gasAvailable": true
+  }
+]

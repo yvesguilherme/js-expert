@@ -1,0 +1,42 @@
+^\d{3}.\d{3}.\d{3}-\d{2}{firstName: "$2", }$
+
+123.123.123-14
+321.123.345-20
+200.300.500.10
+
+############ Transformar por exemplo um csv em JSON
+RegExp (find vscode): ^(\w+),\s(\w+)$
+Replace (vscode): {firstName: "$1",  lastName: "$2"}
+
+### Entrada
+Yves, Guilherme
+Lopo, Ribeiro
+Lima, Gabriela
+
+### Saída
+{firstName: "Yves",  lastName: "Guilherme"}
+{firstName: "Lopo",  lastName: "Ribeiro"}
+{firstName: "Lima",  lastName: "Gabriela"}
+
+########### Transformar Markdown em HTML
+RegExp (find vscode): \[(.*?)\]\(([http|https].*?)\)
+Replace (vscode): <a href="$2">$1</a>
+
+### Entrada
+O [Yves Guilherme](https://google.com) programa demais e você deveria acessar este site [Twitter](http://www.twitter.com) ou ver algum vídeo [Youtube](https://www.youtube.com).
+
+Ah... e você pode ver também a França ganhar a copa no [Globo](https://www.globo.com)
+[Yahoo](http://yahooh.com)
+
+vai que vai!
+
+vai que vai!
+
+### Saída
+O <a href="https://google.com">Yves Guilherme</a> programa demais e você deveria acessar este
+site <a href="https://www.twitter.com">Twitter</a> ou ver algum vídeo <a href="https://www.youtube.com">Youtube</a>.
+
+Ah... e você pode ver também a França ganhar a copa no <a href="https://www.globo.com">Globo</a>
+<a href="https://yahooh.com">Yahoo</a>
+
+vai que vai!
