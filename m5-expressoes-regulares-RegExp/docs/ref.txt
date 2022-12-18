@@ -1,0 +1,2 @@
+# pegar o texto do console.log e retornar em um arquivo.
+npm start | tee text.txt
