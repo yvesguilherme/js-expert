@@ -1,0 +1,9 @@
+https://refactoring.guru/design-patterns/builder
+
+https://github.com/ErickWendel/semana-javascript-expert02/blob/main/aula04/public/pages/room/src/util/peer.js
+
+https://refactoring.guru/design-patterns/builder
+
+https://en.wikipedia.org/wiki/Fluent_interface
+
+https://martinfowler.com/bliki/FluentInterface.html
