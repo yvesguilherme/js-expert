@@ -1,0 +1,9 @@
+https://wiki.c2.com/?TestDataBuilder
+
+https://www.eventbrite.com/engineering/readable-javascript-tests-with-object-builders/
+
+https://ericvruder.dk/20191209/test-data-builder-pattern/
+
+https://reflectoring.io/objectmother-fluent-builder/
+
+http://www.natpryce.com/articles/000714.html
