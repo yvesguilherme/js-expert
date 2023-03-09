@@ -12,15 +12,15 @@ function productValidator(product) {
   }
 
   if (/(\W|\d)/.test(product.name)) {
-    errors.push(`name: invalid value, current [${product.name}] expected to have only words`);
+    errors.push(`name: invalid value, current [${product.name}] expected to have only words.`);
   }
 
-  if (product.price >= 2000) {
-    errors.push(`price: invalid value, current [${product.price}] expected to be between 0 and 1000`);
+  if (!(product.price >= 0 && product.price <= 1000)) {
+    errors.push(`price: invalid value, current [${product.price}] expected to be between 0 and 1000.`);
   }
 
   if (!['electronic', 'organic'].includes(product.category)) {
-    errors.push(`category: invalid value, current [${product.category}] expected to be electronic or organic`);
+    errors.push(`category: invalid value, current [${product.category}] expected to be electronic or organic.`);
   }
 
   return {

@@ -1,7 +1,7 @@
 const { expect } = require('chai');
-const { it, describe } = require('mocha'); // procura por padrão o arquivo index.js
+const { it, describe } = require('mocha');
 
-const { productValidator } = require('../src');
+const { productValidator } = require('../src'); // procura por padrão o arquivo index.js
 const ProductDataBuilder = require('./model/productDataBuilder');
 
 describe('Test Data Builder', () => {
@@ -35,7 +35,7 @@ describe('Test Data Builder', () => {
       const result = productValidator(product);
 
       const expected = {
-        errors: ['name: invalid value, current [abc123] expected to have only words'],
+        errors: ['name: invalid value, current [abc123] expected to have only words.'],
         result: false
       };
 
@@ -47,7 +47,7 @@ describe('Test Data Builder', () => {
       const result = productValidator(product);
 
       const expected = {
-        errors: ['price: invalid value, current [2000] expected to be between 0 and 1000'],
+        errors: ['price: invalid value, current [2000] expected to be between 0 and 1000.'],
         result: false
       };
 
@@ -59,7 +59,7 @@ describe('Test Data Builder', () => {
       const result = productValidator(product);
 
       const expected = {
-        errors: ['category: invalid value, current [mechanic] expected to be electronic or organic'],
+        errors: ['category: invalid value, current [mechanic] expected to be electronic or organic.'],
         result: false
       };
 
