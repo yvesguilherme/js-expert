@@ -1,0 +1,20 @@
+{
+  "name": "behavioral",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "knex": "^2.4.2",
+    "pg": "^8.10.0"
+  }
+}
