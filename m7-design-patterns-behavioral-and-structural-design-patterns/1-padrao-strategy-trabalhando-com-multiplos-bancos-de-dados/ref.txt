@@ -1,0 +1,3 @@
+https://refactoring.guru/design-patterns/strategy
+
+https://en.wikipedia.org/wiki/Composition_over_inheritance
