@@ -1,0 +1,3 @@
+$ npx jest --init // after npm i jest@26
+
+https://refactoring.guru/design-patterns/observer
