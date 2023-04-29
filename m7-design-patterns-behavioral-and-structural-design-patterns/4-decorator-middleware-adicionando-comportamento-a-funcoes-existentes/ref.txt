@@ -1,0 +1,2 @@
+# Check server status
+$ curl -i localhost:3000
