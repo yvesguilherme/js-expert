@@ -7,3 +7,7 @@ $ npm version minor
 $ npm version major
 $ npm i @yvesguilherme/fluentsql@latest
 $ npm i @yvesguilherme/fluentsql@1.x
+
+https://docs.npmjs.com/about-semantic-versioning
+
+https://docs.npmjs.com/updating-packages-downloaded-from-the-registry
