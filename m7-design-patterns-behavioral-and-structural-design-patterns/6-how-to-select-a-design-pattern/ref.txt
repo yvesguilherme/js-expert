@@ -1,0 +1,7 @@
+https://www.startertutorials.com/patterns/select-design-pattern.html
+
+https://softwareengineering.stackexchange.com/a/227880
+
+https://www.gofpatterns.com/design-patterns/module7/how-to-choose-designPattern.php
+
+https://en.wikipedia.org/wiki/Software_design_pattern
