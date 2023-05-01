@@ -1,0 +1,9 @@
+$ npm login
+$ npm publish --access=public
+$ npm version patch
+$ npm outdated
+$ npm update
+$ npm version minor
+$ npm version major
+$ npm i @yvesguilherme/fluentsql@latest
+$ npm i @yvesguilherme/fluentsql@1.x
