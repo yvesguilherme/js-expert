@@ -1,0 +1,15 @@
+https://youtu.be/mVgUs7VHqBg
+
+https://github.com/verdaccio/verdaccio/issues/1305
+
+https://www.npmjs.com/package/verdaccio
+
+https://github.com/features/packages
+
+https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+
+https://docs.github.com/en/packages/quickstart
+
+https://github.com/verdaccio/verdaccio/issues/1305
+
+https://docs.npmjs.com/configuring-your-registry-settings-as-an-npm-enterprise-user
