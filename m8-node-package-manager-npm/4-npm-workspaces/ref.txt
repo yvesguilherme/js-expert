@@ -1,0 +1,12 @@
+$ npm init -y
+$ npm init -w string-util -y --scope @yvesguilherme
+$ npm i -D nodemon -w string-util
+$ touch string-util/index.js
+$ touch string-util/index.test.js
+$ npm i -D c8 --workspaces
+$ npm test -w string-util
+$ npm i @yvesguilherme/string-util -w date-util // npm i @yvesguilherme/string-util -w @yvesguilherme/date-util
+$ npm run test:dev -w @yvesguilherme/date-util
+$ npm run test:cov -w @yvesguilherme/date-util
+$ npm run test:cov -w @yvesguilherme/string-util
+$ npm test --workspaces

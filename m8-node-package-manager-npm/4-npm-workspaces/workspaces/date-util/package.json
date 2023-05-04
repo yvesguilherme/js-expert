@@ -1,0 +1,22 @@
+{
+  "name": "@yvesguilherme/date-util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "c8": "^7.13.0",
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "test": "node index.test.js",
+    "test:dev": "npx nodemon index.test.js",
+    "test:cov": "npx c8 --all --exclude node_modules/* npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@yvesguilherme/string-util": "^1.0.0"
+  }
+}
