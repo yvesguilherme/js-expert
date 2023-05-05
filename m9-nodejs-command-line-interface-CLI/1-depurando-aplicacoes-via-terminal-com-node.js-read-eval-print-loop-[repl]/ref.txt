@@ -1,0 +1,57 @@
+https://blog.cleancoder.com/uncle-bob/2020/05/27/ReplDrivenDesign.html
+
+https://nodejs.org/api/repl.html#repl_repl
+
+
+$ curl  "localhost:3000?salary=3000&discount=15"
+$ node inspect index.mjs
+$ list(100)
+$ setBreakpoint(15)
+$ cont
+$ curl  "localhost:3000?salary=3000&discount=15"
+$ exec req
+$ exec req.url
+$ exec new URLSearchParams(req.url)
+$ exec new URLSearchParams(req.url).get('salary')
+$ exec new URLSearchParams(req.url).get('discount')
+$ exec new URLSearchParams(req.url).get('/salary')
+$ exec new URLSearchParams(req.url).get('/?salary')
+$ .save debug.log
+$ .help
+$ r
+$ list(100)
+$ clearBreakpoint('index.mjs', 15)
+$ breakpoints
+$ sb(17)
+$ cont
+$ next
+$ repl
+$ data
+$ r
+$ curl  "localhost:3000?salary=3000&discount=15"
+$ r
+$ curl  "localhost:3000?salary=3000&discount=15"
+$ c
+$ repl
+$ netSalary
+$ next
+$ repl
+$ netSalary(data)
+$ breakpoints
+$ cb('index.mjs', 17)
+$ breakpoints
+$ r
+$ curl  "localhost:3000?salary=3000&discount=15"
+$ c
+$ exec result
+$ c
+
+
+// new terminal
+$ node
+$ .help
+$ await Promise.resolve(123)
+// if: Uncaught: SyntaxError: await is only valid in async functions and the top level bodies of modules
+// $ node --experimental-repl-await
+$ node --inspect index.mjs // opens a websocket
+$ node --inspect-brk index.mjs // opens a websocket and stop at the first line
