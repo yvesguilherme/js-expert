@@ -1,0 +1,10 @@
+$ docker run -p "8080:80" -d nginx
+$ docker ps
+$ docker logs c5796ea28c79
+$ curl localhost:8080
+$ docker ps
+$ docker rm -f c5796ea28c79
+
+$ npm config set init.author.name "yvesguilherme"
+
+https://github.com/google/zx
