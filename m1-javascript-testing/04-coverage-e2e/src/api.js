@@ -37,7 +37,6 @@ const routes = {
 const handler = function (request, response) {
   const { url, method } = request;
   const routeKey = `${url}:${method.toLowerCase()}`;
-  // console.log('routeKey', routeKey);
   const chosen = routes[routeKey] || routes.default;
 
   response.writeHead(200, {

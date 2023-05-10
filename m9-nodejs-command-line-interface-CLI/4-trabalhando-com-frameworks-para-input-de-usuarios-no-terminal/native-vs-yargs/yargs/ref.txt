@@ -1,0 +1,4 @@
+$ node cli-yargs.mjs --help
+$ node cli-yargs.mjs createHero --help
+$ chmod +x cli-yargs.mjs
+$ ./cli-yargs.mjs createHero -n Batman -a 32 -p Rich
