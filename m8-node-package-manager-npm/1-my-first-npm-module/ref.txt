@@ -1,3 +1,4 @@
+$ npm config set init-author-name "Yves Guilherme Lopo R. Lima"
 $ npm login
 $ npm publish --access=public
 $ npm version patch
