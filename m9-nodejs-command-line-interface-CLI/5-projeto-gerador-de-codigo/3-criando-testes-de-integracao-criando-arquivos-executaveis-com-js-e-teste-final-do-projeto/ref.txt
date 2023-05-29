@@ -1,0 +1,8 @@
+$ cd src 
+$ chmod +x index.js
+
+$ npm link // após colocar o bin no package.json
+$ npm unlink -g @yvesguilherme/code-gen // nome do pacote
+
+$ ./src/index.js --help
+$ ./src/index.js skeleton --help
