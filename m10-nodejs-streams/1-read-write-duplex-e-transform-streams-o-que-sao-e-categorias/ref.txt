@@ -1,0 +1,21 @@
+Estão no node.js desde as primeiras versões - v0.1.100 (03/07/2010)
+Elas ajudam a processar grandes cargas de dados sob demanda.
+
+Readable streams  - Fonte de dados (banco de dados, arquivo, requisição web, qualquer fonte de dados);
+Transform stream  - São usadas para a etapada de conversão de dados e mapeamento. (pega o pedacinho do arquivo e manda pra frente);
+Writable streams  - É a etapa final, para cada item que vier da corrente de dados, este item é jogado na saída do processo,
+como um console.log, um banco de dados externo, site.
+Pipelines         - É um funil em que cada pedaço de etapa da node.js streams passa.
+
+Sem saber, a maioria das pessoas utilizam node.js streams.
+Ex: No módulo nativo HTTP do node.js, o request é uma readable stream e o response é uma writable stream.
+
+
+$ ls -la | grep -- "package" | awk '{print $NF}' | xargs cat | jq .name
+
+
+https://erickwendel.com/talk/detail/5ee6b2452c16eb4db7e7b776
+
+https://www.slideshare.net/OdessaJSConf/andrii-shumada-use-cases-of-nodejs-streams
+
+https://github.com/maxogden/mississippi#duplex
