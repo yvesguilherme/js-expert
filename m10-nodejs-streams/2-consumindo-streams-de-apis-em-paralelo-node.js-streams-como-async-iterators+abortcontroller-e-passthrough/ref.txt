@@ -1,0 +1,6 @@
+$ curl localhost:3000 | tee log.txt
+
+# plus... 
+$ npm install -g ntl
+$ ntl example01
+$ nt

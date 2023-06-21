@@ -1,0 +1,20 @@
+{
+  "name": "@yvesguilherme/2-consumindo-streams-de-apis-em-paralelo-async-iterators-abortcontroller-passthrough",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start-server": "mkdir -p logs && node web-api.js",
+    "api1": "curl localhost:3000 | tee logs/api1.log",
+    "api2": "curl localhost:4000 | tee logs/api2.log",
+    "example01": "node examples/1-concat-streams-pass-through.js | tee logs/1-concat-streams-pass-through.log",
+    "example02": "node examples/2-async-streams.js | tee logs/2-async-streams.log"
+  },
+  "keywords": [],
+  "author": "Yves Guilherme Lopo R. Lima",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
