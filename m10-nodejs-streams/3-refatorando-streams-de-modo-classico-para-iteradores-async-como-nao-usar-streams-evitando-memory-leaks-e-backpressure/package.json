@@ -1,0 +1,19 @@
+{
+  "name": "@yvesguilherme/3-refatorando-streams-de-modo-classico-para-iteradores-async--como-nao-usar-streams-evitando-memory-leaks-e-backpressure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start-server": "mkdir -p logs && node web-api.js",
+    "api1": "curl localhost:3000 | tee logs/api1.log",
+    "api2": "curl localhost:4000 | tee logs/api2.log",
+    "example01": "node examples/1-concat-streams-async-iterators.js | tee logs/1-concat-streams-async-iterators.log"
+  },
+  "keywords": [],
+  "author": "Yves Guilherme Lopo R. Lima",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
