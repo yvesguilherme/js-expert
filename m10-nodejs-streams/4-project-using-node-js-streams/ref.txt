@@ -1,0 +1,13 @@
+https://2019.stateofjs.com/
+
+http://ndjson.org/
+
+https://itnext.io/streaming-sql-in-node-js-eb419c5bd27e
+
+https://dev.to/_patrickgod/fetching-millions-of-rows-with-streams-in-node-js-487e
+
+https://hevodata.com/learn/nodejs-open-source-etl-tools-for-2021/
+
+https://www.npmjs.com/package/ndjson
+
+https://stackoverflow.com/questions/48387040/how-do-i-determine-the-correct-max-old-space-size-for-node-js/62650303#62650303
