@@ -1,0 +1,4 @@
+# Large files
+
+https://stackoverflow.com/questions/48734119/git-lfs-is-not-a-git-command-unclear
+https://git-lfs.com/
