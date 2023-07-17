@@ -1,0 +1,13 @@
+{
+  "name": "@yvesguilherme/01-erros-nao-capturados-pelo-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-server-error.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yves Guilherme Lopo R. Lima",
+  "license": "ISC"
+}
