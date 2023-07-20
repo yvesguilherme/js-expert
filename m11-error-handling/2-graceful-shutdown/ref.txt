@@ -1,0 +1,16 @@
+$ docker run -d -p 27017:27017 --name mongodb mongo
+$ npm install mongodb
+$ docker exec -it mongodb bash
+$ mongosh
+  $ show dbs
+  $ use comics
+  $ db.heroes.find()
+$ node index.js
+$ curl -i localhost:3000 -X POST --data '{"name": "Nygma", "age": "32"}'
+
+
+https://nodejs.org/api/process.html?ref=hackernoon.com#process_signal_events
+
+https://hackernoon.com/graceful-shutdown-in-nodejs-2f8f59d1c357
+
+https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html?ref=hackernoon.com
