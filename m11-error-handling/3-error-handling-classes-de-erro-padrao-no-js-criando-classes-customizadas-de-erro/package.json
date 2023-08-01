@@ -1,0 +1,13 @@
+{
+  "name": "@yvesguilherme/3-error-handling-classes-de-erro-padrao-no-js-criando-classes-customizadas-de-erro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yves Guilherme Lopo R. Lima",
+  "license": "ISC"
+}
