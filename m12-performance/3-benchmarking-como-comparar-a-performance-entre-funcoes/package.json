@@ -1,0 +1,17 @@
+{
+  "name": "@yvesguilherme/3-benchmarking-como-comparar-a-performance-entre-funcoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yves Guilherme Lopo R. Lima",
+  "license": "ISC",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "uuid": "^9.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+https://erickwendel.com/talk/detail/5dc569fe80ce1becfae37503
+
+https://nodesource.com/
+
+https://newrelic.com/
+
+https://www.npmjs.com/package/autocannon
+
+https://www.npmjs.com/package/0x
+
+https://clinicjs.org/
