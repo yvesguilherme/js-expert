@@ -1,0 +1,16 @@
+{
+  "name": "@yvesguilherme/5-turbinando-uma-web-api-existente-com-o-modulo-cluster-mais-teste-de-carga-com-autocannon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yves Guilherme Lopo R. Lima",
+  "license": "ISC",
+  "devDependencies": {
+    "autocannon": "^7.12.0"
+  }
+}
