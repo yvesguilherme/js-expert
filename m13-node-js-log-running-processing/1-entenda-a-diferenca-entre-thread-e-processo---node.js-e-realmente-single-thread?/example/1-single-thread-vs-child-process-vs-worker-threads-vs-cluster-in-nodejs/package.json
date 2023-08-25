@@ -1,0 +1,25 @@
+{
+  "name": "@yvesguilherme/1-single-thread-vs-child-process-vs-worker-threads-vs-cluster-in-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "promise": "node serverWithPromises.js",
+    "async": "node asyncServer.js",
+    "slow": "node slowServer.js",
+    "spawn": "node child-processes/childSpawnServer.js",
+    "fork": "node child-processes/childForkServer.js",
+    "singleT": "node worker-threads/singleThreadServer.js",
+    "multiT": "node worker-threads/multiThreadServer.js",
+    "cluster": "node worker-threads/clusterServer.js"
+  },
+  "keywords": [],
+  "author": "Yves Guilherme Lopo R. Lima",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  }
+}
