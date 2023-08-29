@@ -1,0 +1,5 @@
+https://node.dev/post/understanding-worker-threads-in-node-js
+
+https://nodejs.org/en/docs/guides/dont-block-the-event-loop
+
+https://rclayton.silvrback.com/speaking-intelligently-about-java-vs-node-performance#:~:text=Java%20will%20almost%20always%20be,development%20than%20the%20V8%20runtime.
