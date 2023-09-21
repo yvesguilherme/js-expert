@@ -1,0 +1,11 @@
+https://ffmpeg.org/ffmpeg.html
+
+https://github.com/gpac/gpac/wiki/MP4Box
+
+https://qastack.com.br/video/20495/how-do-i-set-up-and-use-ffmpeg-in-windows
+
+https://gist.github.com/Vestride/278e13915894821e1d6f
+
+https://ffbinaries.com/
+
+https://support.google.com/youtube/answer/1722171?hl=en&ref_topic=9257782&sjid=1048548203812977349-SA#zippy=%2Cbitrate%2Cframe-rate%2Cvideo-codec-h%2Caudio-codec-aac-lc%2Ccontainer-mp%2Cvideo-resolution-and-aspect-ratio%2Ccolor-space
