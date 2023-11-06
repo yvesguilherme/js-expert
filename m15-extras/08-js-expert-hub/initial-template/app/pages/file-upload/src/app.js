@@ -1,48 +1,83 @@
 import Clock from './deps/clock.js';
+import View from './view.js';
 
-const fileUpload = document.getElementById('fileUpload')
-const btnUploadVideo = document.getElementById('btnUploadVideos')
-const fileSize = document.getElementById('fileSize')
-const fileInfo = document.getElementById('fileInfo')
-const txtfileName = document.getElementById('fileName')
-const fileUploadWrapper = document.getElementById('fileUploadWrapper')
-const elapsed = document.getElementById('elapsed')
+const view = new View();
+const clock = new Clock();
+
+const worker = new Worker('./src/web-worker/worker.js', {
+  type: 'module'
+});
+
+worker.onerror = (error) => {
+  console.error(`Error worker`, error);
+};
+
+worker.onmessage = ({ data }) => {
+  if (data.status !== 'done') {
+    return;
+  }
+
+  // setTimeout(() => {
+    clock.stop();
+    view.updateElapsedTime(`Process took ${took.replace('ago', '')}`);
+  // }, 5000);
+};
+
+let took = '';
+view.configureOnFileChange(file => {
+  const canvas = view.getCanvas();
+  /**
+   * segundo parâmetro Transferable[], é uma função que vai ser transferida do
+   * processo principal para o segundo. É usado geralmente para atualizar view,
+   * porém somente alguns elementos funciona.
+   */
+  worker.postMessage(
+    {
+      file,
+      canvas
+    },
+    [
+      canvas
+    ]
+  );
+
+  clock.start((time) => {
+    took = time;
+    view.updateElapsedTime(`Process started ${time}`);
+  });
+});
+
+async function fakeFetch() {
+  const filePath = '/videos/frag_bunny.mp4';
+  const response = await fetch(filePath);
+  // const response = await fetch(filePath, {
+  //   method: 'HEAD'
+  // });
+
+  // const tamanhoArquivo = response.headers.get('content-length'); // file length
+
+  // if (tamanhoArquivo == 0) {
+  //   throw new Error(`This file cannot be processed!`);
+  // }
 
 
-fileUpload.addEventListener('change', onChange)
-btnUploadVideo.addEventListener('click', () => {
-    // trigger file input
-    fileUpload.click()
-})
-let took = ''
+  const file = new File([await response.blob()], filePath, {
+    type: 'video/mp4',
+    lastModified: Date.now()
+  });
 
-function parseBytesIntoMBAndGB(bytes) {
-    const mb = bytes / (1024 * 1024)
-    // if mb is greater than 1024, then convert to GB
-    if (mb > 1024) {
-        // rount to 2 decimal places
-        return `${Math.round(mb / 1024)}GB`
+  const event = new Event('change');
+  Reflect.defineProperty(
+    event,
+    'target',
+    {
+      value: {
+        files: [file]
+      }
     }
-    return `${Math.round(mb)}MB`
+  );
+
+  document.getElementById('fileUpload').dispatchEvent(event);
 }
-const clock = new Clock()
 
-function onChange(e) {
-    const file = e.target.files[0]
-    const { name, size } = file
-    txtfileName.innerText = name
-    fileSize.innerText = parseBytesIntoMBAndGB(size)
-
-    fileInfo.classList.remove('hide')
-    fileUploadWrapper.classList.add('hide')
-
-    clock.start((time) => {
-        took = time;
-        elapsed.innerText = `Process started ${time}`
-    })
-
-    setTimeout(() => {
-        clock.stop()
-        elapsed.innerText = `Process took ${took.replace('ago', '')}`
-    }, 5000)
-}
+fakeFetch();
