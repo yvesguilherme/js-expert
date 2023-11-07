@@ -4,22 +4,22 @@ import { logger } from './util.js'
 import { pipeline } from 'node:stream/promises'
 
 export default class Routes {
-    #downloadsFolder
-    constructor({ downloadsFolder }) {
-        this.#downloadsFolder = downloadsFolder
-    }
-    async options(request, response) {
-        console.log('passou options')
-        response.writeHead(204, {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'OPTIONS, POST'
-        })
-        response.end()
-    }
+  #downloadsFolder
+  constructor({ downloadsFolder }) {
+    this.#downloadsFolder = downloadsFolder
+  }
+  async options(request, response) {
+    console.log('passou options')
+    response.writeHead(204, {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'OPTIONS, POST'
+    })
+    response.end()
+  }
 
-    get(request, response) {
-        response.writeHead(200, { Connection: 'close' });
-        response.end(`
+  get(request, response) {
+    response.writeHead(200, { Connection: 'close' });
+    response.end(`
             <html>
                 <head><title>File Upload - Erick Wendel</title></head>
                 <body>
@@ -30,37 +30,37 @@ export default class Routes {
                 </form>
                 </body>
         </html>`
-        );
+    );
+  }
+  async post(request, response) {
+    const { headers } = request
+    const redirectTo = headers.origin
+
+    const uploadHandler = new UploadHandler({
+      downloadsFolder: this.#downloadsFolder
+    })
+
+    const onFinish = (response, redirectTo) => () => {
+      response.writeHead(200, {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'OPTIONS, POST'
+      })
+      response.end('Files uploaded with success!')
     }
-    async post(request, response) {
-        const { headers } = request
-        const redirectTo = headers.origin
 
-        const uploadHandler = new UploadHandler({
-            downloadsFolder: this.#downloadsFolder
-        })
+    const busboyInstance = uploadHandler
+      .registerEvents(
+        headers,
+        onFinish(response, redirectTo)
+      )
 
-        const onFinish = (response, redirectTo) => () => {
-            response.writeHead(200, {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'OPTIONS, POST'
-            })
-            response.end('Files uploaded with success!')
-        }
+    await pipeline(
+      request,
+      busboyInstance
+    )
 
-        const busboyInstance = uploadHandler
-            .registerEvents(
-                headers,
-                onFinish(response, redirectTo)
-            )
-
-        await pipeline(
-            request,
-            busboyInstance
-        )
-
-        logger.info('Request finished with success!')
+    logger.info('Request finished with success!')
 
 
-    }
+  }
 }

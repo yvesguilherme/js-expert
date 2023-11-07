@@ -21,14 +21,21 @@ Marque esse projeto com uma estrela 🌟
 ## Checklist Features
 
 - Video Uploader
-  - [] - Deve entender videos em formato MP4 mesmo se não estiverem fragmentados
-  - [] - Deve processar itens em threads isoladas com Web Workers
-  - [] - Deve converter fragmentos de videos em formato `144p`
-  - [] - Deve renderizar frames em tempo real em elemento canvas
-  - [] - Deve gerar arquivos WebM a partir de fragmentos
+  - [X] - Deve entender videos em formato MP4 mesmo se não estiverem fragmentados
+  - [X] - Deve processar itens em threads isoladas com Web Workers
+  - [X] - Deve converter fragmentos de videos em formato `144p`
+  - [X] - Deve renderizar frames em tempo real em elemento canvas
+  - [X] - Deve gerar arquivos WebM a partir de fragmentos
 
 ### Desafios
-- [] - TBD
+  - [] - Corrigir a responsividade
+  - [] - Corrigir problema da Webm de não mostrar a duração do vídeo
+  - [] - Encodar em 360p e 720p
+  - [] - Fazer encoding/decoding de áudio e upload
+  - [] - Tentar usar outros muxers
+    - https://github.com/Vanilagy/webm-muxer
+    - https://github.com/Vanilagy/mp4-muxer
+  - [] - Concatenar o arquivo final no servidor em um só
 
 
 ### Links mostrados nos aulas:
@@ -44,4 +51,3 @@ Marque esse projeto com uma estrela 🌟
     2. no package.json apague todo o comando do `browser-sync` e substitua por `npx http-server .`
     3. agora o projeto vai estar executando na :8080 então vá no navegador e tente acessar o http://localhost:8080/
   A unica coisa, é que o projeto não vai reiniciar quando voce alterar algum código, vai precisar dar um F5 na página toda vez que alterar algo
-

@@ -44,7 +44,7 @@ export default class View {
 
       this.#txtfileName.innerText = name;
       this.#fileSize.innerText = this.parseBytesIntoMBAndGB(size);
-      
+
       this.#fileInfo.classList.remove('hide');
       this.#fileUploadWrapper.classList.add('hide');
     };
@@ -56,5 +56,17 @@ export default class View {
 
   configureOnFileChange(fn) {
     this.#fileUpload.addEventListener('change', this.onChange(fn));
+  }
+
+  downloadBlobAsFile(buffers, fileName) {
+    const blob = new Blob(buffers, { type: 'video/webm' });
+    const blobUrl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = blobUrl;
+    link.download = fileName;
+    link.click();
+
+    URL.revokeObjectURL(blobUrl);
   }
 };

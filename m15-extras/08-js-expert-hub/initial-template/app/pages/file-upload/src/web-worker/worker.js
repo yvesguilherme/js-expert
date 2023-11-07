@@ -1,6 +1,8 @@
 import MP4Demuxer from "./mp4Demuxer.js";
 import VideoProcessor from "./videoProcessor.js";
 import CanvasRenderer from "./canvasRenderer.js";
+import WebMWriter from './../deps/webm-writer2.js';
+import Service from "./service.js";
 
 // 144p 
 const qvgaConstraints = {
@@ -35,9 +37,22 @@ function createEncoderConfig(typeFile, typeConstraints) {
   };
 };
 
+const webMWriterConfig = {
+  codec: 'VP9',
+  width: qvgaConstraints.width,
+  height: qvgaConstraints.height,
+  bitrate: 10e6
+};
+
 const mp4Demuxer = new MP4Demuxer();
+const service = new Service({
+  url: 'http://localhost:3000'
+});
+const webMWriter = new WebMWriter(webMWriterConfig);
 const videoProcessor = new VideoProcessor({
-  mp4Demuxer
+  mp4Demuxer,
+  webMWriter,
+  service
 });
 
 onmessage = async ({ data }) => {
@@ -46,13 +61,16 @@ onmessage = async ({ data }) => {
 
   await videoProcessor.start({
     file: data.file,
-    renderFrame ,
-    encoderConfig
+    encoderConfig,
+    renderFrame,
+    sendMessage: (message) => {
+      self.postMessage(message);
+    }
   });
 
   // setTimeout(() => {
-  self.postMessage({
-    status: 'done'
-  });
+  // self.postMessage({
+  //   status: 'done'
+  // });
   // }, 2000);
 };
